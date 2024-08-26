@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enquiry</title>
+    <link
+      rel="shortcut icon"
+      href="images/title_logo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-600">
+    <div class="px-4 py-4">
+      <div>
+        <h1 class="text-3xl font-semibold text-center text-white">Enquiries</h1>
+      </div>
+      <div class="bg-transparent text-white px-4">
+        <div>
+          <h3 class="text-2xl font-semibold mt-16">Post Your Enquiry</h3>
+        </div>
+        <div>
+          <form action="/lists" method="post">
+            <div class="mt-8">
+              <label for="input_id" class="font-semibold">Id:</label><br />
+              <input
+                class="border border-gray-500 outline-none p-2 mt-2 rounded-md text-black"
+                type="number"
+                id="input_id"
+                name="id"
+                placeholder="Id"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="input_name" class="font-semibold">Name:</label><br />
+              <input
+                class="border border-gray-500 outline-none p-2 mt-2 rounded-md text-black"
+                type="text"
+                id="input_name"
+                name="name"
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="input_email" class="font-semibold">Email:</label
+              ><br />
+              <input
+                class="border border-gray-500 outline-none p-2 mt-2 rounded-md text-black"
+                type="text"
+                id="input_email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="input_message" class="font-semibold">Message:</label
+              ><br />
+              <textarea
+                class="border border-gray-500 outline-none h-40 w-80 p-2 mt-2 rounded-md text-black"
+                type="text"
+                id="input_message"
+                name="message"
+                placeholder="Message"
+              ></textarea>
+            </div>
+
+            <div class="flex">
+              <div class="mt-4">
+                <input
+                  type="submit"
+                  value="Create Enquiries"
+                  class="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-400"
+                />
+
+                <a
+                  href="http://localhost:5173/"
+                  class="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer hover:bg-blue-400"
+                  >Go Back</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

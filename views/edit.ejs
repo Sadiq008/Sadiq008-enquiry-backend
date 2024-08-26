@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Enquiry</title>
+    <link
+      rel="shortcut icon"
+      href="images/title_logo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-600">
+    <div class="px-4 py-4">
+      <div>
+        <h1 class="text-3xl font-semibold text-center text-white">
+          Update Enquiry
+        </h1>
+      </div>
+      <div class="bg-transparent text-white px-4">
+        <div>
+          <h3 class="text-2xl font-semibold mt-16">Update Your Enquiry</h3>
+        </div>
+        <div>
+          <form action="/update/<%= user.id %>" method="POST">
+            <input type="hidden" name="id" value="<%= user ? user.id : '' %>" />
+
+            <div class="mt-4">
+              <label for="input_name" class="font-semibold">Name:</label><br />
+              <input
+                class="border border-gray-500 outline-none p-2 mt-2 rounded-md text-black"
+                type="text"
+                id="input_name"
+                name="name"
+                value="<%= user ? user.name : '' %>"
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="input_email" class="font-semibold">Email:</label
+              ><br />
+              <input
+                class="border border-gray-500 outline-none p-2 mt-2 rounded-md text-black"
+                type="text"
+                id="input_email"
+                name="email"
+                value="<%= user ? user.email : '' %>"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="input_message" class="font-semibold">Message:</label
+              ><br />
+              <textarea
+                class="border border-gray-500 outline-none h-40 w-80 p-2 mt-2 rounded-md text-black"
+                id="input_message"
+                name="message"
+                placeholder="Message"
+              >
+<%= user ? user.message : '' %></textarea
+              >
+            </div>
+
+            <div class="mt-4">
+              <input
+                type="submit"
+                value="Update Enquiry"
+                class="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
